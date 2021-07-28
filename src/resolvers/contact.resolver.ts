@@ -1,6 +1,6 @@
 import {Resolver, Query, Service} from "xpress-stack"
-import {ContactService} from "../services/contact.service";
-import {ContactSchema} from "../schema/contact.schema";
+import {ContactService} from "@services/contact.service";
+import {ContactSchema} from "@schema/contact.schema";
 
 @Service()
 @Resolver((of) => ContactSchema)

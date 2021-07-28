@@ -1,5 +1,5 @@
 import {EntityName, EventArgs, EventSubscriber, Subscriber} from 'xpress-stack';
-import {ContactEntity} from "../entities/contact.entity";
+import {ContactEntity} from "@entities/contact.entity";
 
 @Subscriber()
 export class ContactSubscriber implements EventSubscriber<ContactEntity> {

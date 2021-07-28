@@ -1,6 +1,6 @@
 import {Get, JsonController, Service, AnyEntity} from "xpress-stack";
-import {ContactService} from "services/contact.service";
-import {ContactEntity} from "entities/contact.entity";
+import {ContactService} from "@services/contact.service";
+import {ContactEntity} from "@entities/contact.entity";
 
 @Service()
 @JsonController('/factorland')

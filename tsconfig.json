@@ -15,7 +15,10 @@
     "paths": {
       "*": ["./src/*"],
       "@controllers/*": ["./src/controllers/*"],
+      "@services/*": ["./src/services/*"],
       "@entities/*": ["./src/entities/*"],
+      "@schema/*": ["./src/schema/*"],
+      "@resolvers/*": ["./src/resolvers/*"],
       "@subscribers/*": ["./src/subscribers/*"]
     }
   },

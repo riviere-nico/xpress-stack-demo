@@ -21,5 +21,12 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "reflect-metadata": "^0.1.13"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./src/orm.config.ts",
+      "./dist/orm.config.js"
+    ]
   }
 }

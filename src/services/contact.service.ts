@@ -1,4 +1,4 @@
-import {Service, Orm, AnyEntity, EntityRepository, v4} from "xpress-stack";
+import {Service, Orm} from "xpress-stack";
 import {ContactEntity} from "@entities/contact.entity";
 
 @Service()
@@ -13,9 +13,11 @@ export class ContactService {
 
         // const testCreated = new ContactEntity();
         // testCreated.id = v4();
+        // testCreated.nom = 'yo !';
         // testCreated.entreprise = 'LDV';
         // testCreated.telephone = '123';
         // testCreated.email = 'coucou';
+        // testCreated.createdAt = new Date();
         // await this.orm.em().persistAndFlush(testCreated)
 
         return await this.repo.findAll();

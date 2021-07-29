@@ -1,10 +1,10 @@
-import {BaseEntity, Entity, PrimaryKey, Property, v4} from "xpress-stack";
+import {BaseEntity, Entity, PrimaryKey, Property, v4} from "xpress-stack"
 
 @Entity({tableName: 'contact'})
 export class ContactEntity extends BaseEntity<ContactEntity, 'id'>{
 
     @PrimaryKey()
-    id: v4;
+    id: string = v4();
 
     @Property()
     nom: string;
@@ -17,7 +17,6 @@ export class ContactEntity extends BaseEntity<ContactEntity, 'id'>{
 
     @Property()
     email: string;
-
 
     @Property()
     createdAt: Date;

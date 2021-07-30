@@ -1,13 +1,13 @@
 import {EntityName, EventArgs, EventSubscriber, Subscriber} from 'xpress-stack';
-import {ContactEntity} from "@entities/contact.entity";
+import {Contact} from "entities/contact";
 
 @Subscriber()
-export class ContactSubscriber implements EventSubscriber<ContactEntity> {
-    getSubscribedEntities(): EntityName<ContactEntity>[] {
-        return [ContactEntity];
+export class ContactSubscriber implements EventSubscriber<Contact> {
+    getSubscribedEntities(): EntityName<Contact>[] {
+        return [Contact];
     }
 
-    async afterCreate(args: EventArgs<ContactEntity>): Promise<void> {
+    async afterCreate(args: EventArgs<Contact>): Promise<void> {
 
         console.log('AFTER CREATE !')
 

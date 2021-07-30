@@ -1,25 +1,21 @@
 import {Service, Orm} from "xpress-stack";
-import {ContactEntity} from "@entities/contact.entity";
+import {Contact} from "@entities/contact";
+import {Author} from "@entities/author";
 
 @Service()
 export class ContactService {
     private repo: any;
 
     constructor(public orm: Orm) {
-        this.repo = this.orm.getRepository(ContactEntity);
+        this.repo = this.orm.getRepository(Contact);
     }
 
-    async getAll(): Promise<ContactEntity[]> {
+    async save(newConstact: Contact) {
+        await this.orm.em().persistAndFlush(newConstact);
+        return newConstact;
+    }
 
-        // const testCreated = new ContactEntity();
-        // testCreated.id = v4();
-        // testCreated.nom = 'yo !';
-        // testCreated.entreprise = 'LDV';
-        // testCreated.telephone = '123';
-        // testCreated.email = 'coucou';
-        // testCreated.createdAt = new Date();
-        // await this.orm.em().persistAndFlush(testCreated)
-
+    async getAll(): Promise<Contact[]> {
         return await this.repo.findAll();
     }
 }
